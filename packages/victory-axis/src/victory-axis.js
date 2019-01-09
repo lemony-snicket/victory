@@ -185,7 +185,7 @@ class VictoryAxis extends React.Component {
         : labelSize.width + padding.right + padding.left;
       const axisValue = isVertical ? 'y' : 'x'
 
-      if (label.props[axisValue] <= 0 || label.props[axisValue] >= labelPosition) {
+      if (label.props[axisValue] <= 0 || label.props[axisValue] > labelPosition) {
         labelPosition = sumLabelSize + label.props[axisValue];
         return true;
       }
